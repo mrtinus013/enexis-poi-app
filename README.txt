@@ -1,3 +1,7 @@
+ENEXIS POI v3.1
+
+Nieuw: automatische deduplicatie op objecttype + objectnummer + GPS-positie. De statusregel toont hoeveel dubbele records zijn verwijderd.
+
 ENEXIS POI v3.0
 Vervang de bestaande bestanden in de root van je GitHub repository door ALLE bestanden uit deze ZIP.
 
