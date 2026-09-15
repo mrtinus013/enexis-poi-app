@@ -1,0 +1,1 @@
+Upload alle bestanden naar de root van je GitHub-repository. Activeer daarna Settings > Pages > Deploy from a branch > main / root. De app leest de openbare POI-data rechtstreeks uit POIenexis/POI-zoeker. iPhone: Safari > Deel > Zet op beginscherm. Android: Chrome > App installeren.
