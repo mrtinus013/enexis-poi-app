@@ -1,1 +1,23 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#d00078"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="styles.css"><title>Enexis POI</title></head><body><header><b><i>›</i> ENEXIS</b><span>POI LOCATIEZOEKER</span></header><main><h1>Waar moet je zijn?</h1><p>Zoek een station, verdeelkast, gasstation, afsluiter of toilet.</p><input id="q" type="search" placeholder="Nummer, naam, straat of plaats…"><div class="bar"><button id="near">◎ Dichtstbij</button><small id="status">Laden…</small></div><nav id="cats"></nav><section id="out"></section></main><dialog id="dlg"><button id="x">×</button><div id="detail"></div></dialog><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="nl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#cf007b"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Enexis POI">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="styles.css">
+<title>Enexis POI</title></head>
+<body>
+<header><div class="brand"><span class="logo">›</span><div><strong>ENEXIS</strong><small>POI LOCATIEZOEKER</small></div></div><button id="refresh" title="Data vernieuwen">↻</button></header>
+<main>
+<section class="top">
+<h1>Waar moet je zijn?</h1><p>Vind snel de juiste locatie en navigeer er direct naartoe.</p>
+<div class="search"><span>⌕</span><input id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="Nummer, naam, straat of plaats…"><button id="clear">×</button></div>
+<div class="quick"><button id="near" class="lime">◎ Dichtstbij</button><button id="recentBtn">◷ Recent</button><button id="favBtn">★ Favorieten</button></div>
+<div id="status">POI-data laden…</div>
+</section>
+<nav id="cats"></nav>
+<div class="sortrow"><span id="count"></span><select id="sort"><option value="auto">Slim sorteren</option><option value="distance">Afstand</option><option value="name">Naam</option></select></div>
+<section id="out"></section>
+</main>
+<dialog id="dlg"><button id="close" class="close">×</button><div id="detail"></div></dialog>
+<div id="toast"></div>
+<script src="app.js"></script></body></html>

@@ -2,9 +2,10 @@
   "name": "Enexis POI Locatiezoeker",
   "short_name": "Enexis POI",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "theme_color": "#d00078",
   "background_color": "#f3f4f5",
+  "theme_color": "#cf007b",
   "icons": [
     {
       "src": "icon-192.png",
