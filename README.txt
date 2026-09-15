@@ -1,22 +1,13 @@
-ENEXIS POI v3.1
+ENEXIS POI v4.0 — GLASS & LAYERED
 
-Nieuw: automatische deduplicatie op objecttype + objectnummer + GPS-positie. De statusregel toont hoeveel dubbele records zijn verwijderd.
+Complete visuele redesign op basis van v3.2.
+- Donkere premium kaartachtige achtergrond
+- Glassmorphism/layered cards met blur en subtiele diepte
+- Magenta als interactie-accent, lime voor primaire actie/status
+- Modernere typografie, rondingen, schaduwen en micro-animaties
+- Geen extra bedieningsknoppen toegevoegd
+- Slimme GPS-contextzoeker uit v3.2 behouden
+- Deduplicatie uit v3.1 behouden
+- Favorieten, recent, navigatiekeuze, offline cache en overige functies behouden
 
-ENEXIS POI v3.0
-Vervang de bestaande bestanden in de root van je GitHub repository door ALLE bestanden uit deze ZIP.
-
-Nieuw:
-- Robuuste coördinatenparser, inclusief toiletdata
-- Recent bezocht + datum/tijd
-- Favorieten
-- In de buurt / afstandssortering
-- Slim zoeken zonder punten, spaties, streepjes en accenten
-- Delen en kopiëren
-- Navigatievoorkeur onthouden
-- Apple Maps, Google Maps, Waze, TomTom GO, Flitsmeister en generieke geo-link
-- Dark mode
-- Offline app-shell en gecachte POI-data
-- Handmatig data vernieuwen
-- Persoonlijke instellingen blijven lokaal per telefoon
-
-Let op: externe navigatie-apps verschillen per iOS/Android-versie. Als een specifieke app geen ondersteunde deep-link op het toestel accepteert, gebruik Google/Apple/Andere app.
+Let op: dit is een Enexis-geïnspireerd ontwerp, geen officiële Enexis huisstijlimplementatie.
