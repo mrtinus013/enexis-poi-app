@@ -1,1 +1,7 @@
-ENEXIS POI v4.1 — echte Glass & Layered rebuild\n\nFrontend opnieuw opgebouwd; geen CSS-laag over het oude witte ontwerp. Slimme zoeklogica en functies uit v3.2 behouden. Service-worker cache: v4.1.\n
+ENEXIS POI v4.3
+- 'Extra donkere modus' verwijderd.
+- Huidige Glass & Layered ontwerp is nu Donkere modus.
+- Volwaardige Lichte modus toegevoegd.
+- Optioneel Automatisch (systeem).
+- Thema wordt lokaal onthouden.
+- v4.2 GPS/render- en selectie-fixes behouden.
