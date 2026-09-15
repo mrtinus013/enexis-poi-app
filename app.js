@@ -1,4 +1,4 @@
-const BASE="https://raw.githubusercontent.com/POIenexis/POI-zoeker/main/",VER="4.3";
+const BASE="https://raw.githubusercontent.com/POIenexis/POI-zoeker/main/",VER="4.4";
 const SRC=[["poi_e_station.csv","Station"],["poi_e_verdeelkast.csv","Verdeelkast"],["poi_g_gasstation.csv","Gasstation"],["poi_g_grondafsluiter.csv","Grondafsluiter"],["poi_e_toiletten.csv","Toilet"]],CATS=["Alles","Station","Verdeelkast","Gasstation","Grondafsluiter","Toilet"];
 let D=[],cat="Alles",P=null,mode="normal",timer;const $=s=>document.querySelector(s),q=$("#q"),get=k=>JSON.parse(localStorage.getItem(k)||"[]"),save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
 function csv(s){let a=[],v="",z=false;for(let i=0;i<s.length;i++){let c=s[i];if(c=='"'){if(z&&s[i+1]=='"'){v+='"';i++}else z=!z}else if(c==";"&&!z){a.push(v);v=""}else v+=c}a.push(v);return a}
