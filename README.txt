@@ -1,4 +1,4 @@
-ENEXIS POI v4.3
+STATION POI v4.3
 - 'Extra donkere modus' verwijderd.
 - Huidige Glass & Layered ontwerp is nu Donkere modus.
 - Volwaardige Lichte modus toegevoegd.
