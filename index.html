@@ -1,8 +1,27 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#cf007b"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Enexis POI"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="stylesheet" href="styles.css"><title>Enexis POI</title></head>
-<body><header><div class="brand"><span>›</span><div><b>ENEXIS</b><small>POI LOCATIEZOEKER</small></div></div><button id="settings">⚙</button></header>
-<main><section class="top"><h1>Waar moet je zijn?</h1><p>Zoek, vind en navigeer direct.</p><div class="search"><span>⌕</span><input id="q" type="search" autocomplete="off" placeholder="Nummer, naam, straat of plaats…"><button id="clear">×</button></div>
-<div class="quick"><button id="near" class="lime">◎ In de buurt</button><button id="recentBtn">◷ Recent</button><button id="favBtn">★ Favorieten</button></div><div id="status">POI-data laden…</div></section>
-<nav id="cats"></nav><div class="toolbar"><span id="count"></span><select id="sort"><option value="auto">Slim sorteren</option><option value="distance">Afstand</option><option value="name">Naam</option></select></div><section id="out"></section></main>
+<!doctype html><html lang="nl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07131b"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Enexis POI">
+<link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css"><title>Enexis POI</title></head>
+<body>
+<div class="map-bg" aria-hidden="true"><i class="road a"></i><i class="road b"></i><i class="road c"></i><i class="road d"></i><i class="road e"></i><i class="water"></i><i class="pulse p1"></i><i class="pulse p2"></i></div>
+<header><div class="brand"><span>›</span><div><b>ENEXIS</b><small>POI</small></div></div><button id="settings" aria-label="Instellingen">⚙</button></header>
+<main>
+<section class="hero">
+ <div class="locationline"><span class="dot"></span><div><strong>Locatiegestuurd zoeken</strong><small>De slimste match verschijnt automatisch bovenaan</small></div></div>
+ <div class="search"><span>⌕</span><input id="q" type="search" autocomplete="off" placeholder="Nummer, kast, adres of plaats…"><button id="clear">×</button></div>
+ <div class="quick"><button id="near" class="lime">◎ In de buurt</button><button id="recentBtn">◷ Recent</button><button id="favBtn">♡ Favorieten</button></div>
+ <div id="status">POI-data laden…</div>
+</section>
+<section class="glass-sheet">
+ <div class="grab"></div>
+ <nav id="cats"></nav>
+ <div class="toolbar"><span id="count"></span><select id="sort"><option value="auto">Slim sorteren</option><option value="distance">Afstand</option><option value="name">Naam</option></select></div>
+ <section id="out"></section>
+</section>
+</main>
 <dialog id="detailDlg"><button class="close">×</button><div id="detail"></div></dialog>
-<dialog id="settingsDlg"><button class="close">×</button><h2>Instellingen</h2><label>Standaard navigatie-app<select id="navPref"><option value="auto">Automatisch</option><option value="apple">Apple Maps</option><option value="google">Google Maps</option><option value="waze">Waze</option><option value="flits">Flitsmeister</option><option value="tomtom">TomTom GO</option><option value="geo">Andere navigatie-app</option></select></label><label class="check"><input type="checkbox" id="dark"> Donkere modus</label><button id="clearRecent" class="wide">Wis recente locaties</button><button id="refresh" class="wide">POI-data opnieuw laden</button><p class="small" id="version">Versie 3.1</p></dialog>
+<dialog id="settingsDlg"><button class="close">×</button><h2>Instellingen</h2><label>Standaard navigatie-app<select id="navPref"><option value="auto">Automatisch</option><option value="apple">Apple Maps</option><option value="google">Google Maps</option><option value="waze">Waze</option><option value="flits">Flitsmeister</option><option value="tomtom">TomTom GO</option><option value="geo">Andere navigatie-app</option></select></label><label class="check"><input type="checkbox" id="dark"> Extra donkere modus</label><button id="clearRecent" class="wide">Wis recente locaties</button><button id="refresh" class="wide">POI-data opnieuw laden</button><p class="small" id="version">Versie 4.1</p></dialog>
 <div id="toast"></div><script src="app.js"></script></body></html>
