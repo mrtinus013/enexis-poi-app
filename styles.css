@@ -30,3 +30,5 @@ body.light .minor,body.light .actions button{background:#edf3f5;color:#263c47;bo
 body.light #settingsDlg select{background:#fff;color:#253943}
 
 .location-setting{margin-top:14px;border-color:rgba(190,214,0,.35)!important}.location-help{margin:7px 2px 15px;line-height:1.4}
+
+.distance-sort{font-size:12px;color:var(--muted);white-space:nowrap}
