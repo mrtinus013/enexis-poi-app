@@ -28,3 +28,5 @@ body.light .badge{background:rgba(167,195,0,.10);border-color:rgba(150,177,0,.20
 body.light dialog{background:rgba(250,253,254,.97);color:#172a34;border-color:rgba(20,45,58,.12)}body.light .close{color:#243b46;background:#eef3f5}
 body.light .minor,body.light .actions button{background:#edf3f5;color:#263c47;border-color:rgba(20,45,58,.12)}
 body.light #settingsDlg select{background:#fff;color:#253943}
+
+.location-setting{margin-top:14px;border-color:rgba(190,214,0,.35)!important}.location-help{margin:7px 2px 15px;line-height:1.4}
