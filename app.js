@@ -1,4 +1,4 @@
-const BASE="https://raw.githubusercontent.com/POIenexis/POI-zoeker/main/",VER="4.7";
+const BASE="https://raw.githubusercontent.com/POIenexis/POI-zoeker/main/",VER="4.8";
 const SRC=[["poi_e_station.csv","Station"],["poi_e_verdeelkast.csv","Verdeelkast"],["poi_g_gasstation.csv","Gasstation"],["poi_g_grondafsluiter.csv","Grondafsluiter"],["poi_e_toiletten.csv","Toilet"]],CATS=["Alles","Station","Verdeelkast","Gasstation","Grondafsluiter","Toilet"];
 let D=[],cat="Alles",P=null,mode="normal",timer,geoVersion=0;const $=s=>document.querySelector(s),q=$("#q"),get=k=>JSON.parse(localStorage.getItem(k)||"[]"),save=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
 function csv(s){let a=[],v="",z=false;for(let i=0;i<s.length;i++){let c=s[i];if(c=='"'){if(z&&s[i+1]=='"'){v+='"';i++}else z=!z}else if(c==";"&&!z){a.push(v);v=""}else v+=c}a.push(v);return a}
@@ -23,8 +23,8 @@ function items(){
  if(mode=="recent"){let m=new Map(D.map(i=>[i.k,i]));a=get("recent").map(o=>{let i=m.get(o.k);if(i)i.when=o.when;return i}).filter(Boolean).filter(i=>cat=="Alles"||i.type==cat)}
  if(mode=="fav"){let f=new Set(get("favs"));a=a.filter(i=>f.has(i.k))}
  if(P)a.forEach(i=>{if(i._gv!==geoVersion){i.dist=hav(P.latitude,P.longitude,i.lat,i.lon);i._gv=geoVersion}});
- if(x.compact){a=a.map(i=>({i,n:scoreItem(i,x)})).filter(v=>isFinite(v.n)).sort((a,b)=>b.n-a.n||((a.i.dist??1e9)-(b.i.dist??1e9))).map(v=>v.i)}
- else{let z=$("#sort").value;if(z=="distance"||(z=="auto"&&P&&mode=="normal"))a.sort((a,b)=>(a.dist??1e9)-(b.dist??1e9));else if(z=="name")a.sort((a,b)=>a.sortName<b.sortName?-1:a.sortName>b.sortName?1:0)}
+ if(x.compact){a=a.map(i=>({i,n:scoreItem(i,x)})).filter(v=>isFinite(v.n)).map(v=>v.i)}
+ if(P)a.sort((a,b)=>(a.dist??1e9)-(b.dist??1e9));
  return a
 }
 function render(){$("#near")?.classList.toggle("selected",mode=="normal"&&!!P);$("#recentBtn")?.classList.toggle("selected",mode=="recent");$("#favBtn")?.classList.toggle("selected",mode=="fav");let a=items();$("#count").textContent=`${a.length.toLocaleString("nl-NL")} resultaten`;$("#out").innerHTML=a.slice(0,200).map(i=>`<article class="card" data-k="${esc(i.k)}"><div><div class="code">${esc(i.code||i.name||"POI")}</div><div class="name">${esc(i.name)}</div><div class="addr">${esc([i.street,i.house,i.zip,i.city].filter(Boolean).join(" "))}</div>${i.when?`<div class="addr">${new Date(i.when).toLocaleString("nl-NL",{dateStyle:"short",timeStyle:"short"})}</div>`:""}</div><div><div class="badge">${i.type}</div>${isFinite(i.dist)?`<div class="dist">${i.dist<1?Math.round(i.dist*1000)+" m":i.dist.toFixed(1)+" km"}</div>`:""}</div></article>`).join("")||`<div class="empty">${mode=="recent"?"Nog geen recent bezochte locaties.":mode=="fav"?"Nog geen favorieten.":"Geen locaties gevonden."}</div>`;document.querySelectorAll(".card").forEach(x=>x.onclick=()=>detail(D.find(i=>i.k===x.dataset.k)))}

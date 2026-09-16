@@ -1,8 +1,6 @@
-StationZoeker v4.7
-- Sorteerkeuzes 'Slim sorteren' en 'Naam' verwijderd.
-- Resultaten worden bij beschikbare locatie uitsluitend op afstand gesorteerd.
-- Slimme zoekherkenning (zoals SK004 / SK4) blijft als filterherkenning behouden.
-- Flitsmeister uit navigatiekeuzes verwijderd: de gebruikte flitsmeister:// link startte alleen de app en gaf geen bestemming door.
-- Oude opgeslagen Flitsmeister-voorkeur valt automatisch terug op Automatisch.
-- Apple Maps, Google Maps, Waze, TomTom GO en generieke navigatie-optie blijven beschikbaar.
-- Locatievoorziening-knop uit v4.6 behouden.
+StationZoeker v4.8
+HOTFIX:
+- 'In de buurt' gerepareerd.
+- v4.7 verwees in JavaScript nog naar de verwijderde sorteerkeuzelijst (#sort), waardoor renderen na locatiebepaling stopte.
+- Geen Naam/Slim sorteerkeuze; bij locatie altijd afstand.
+- Navigatie-aanpassingen uit v4.7 behouden.
