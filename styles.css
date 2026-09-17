@@ -32,3 +32,12 @@ body.light #settingsDlg select{background:#fff;color:#253943}
 .location-setting{margin-top:14px;border-color:rgba(190,214,0,.35)!important}.location-help{margin:7px 2px 15px;line-height:1.4}
 
 .distance-sort{font-size:12px;color:var(--muted);white-space:nowrap}
+
+.fry-chip{border-color:rgba(255,190,60,.28)!important}
+.fry-chip.on{background:linear-gradient(135deg,#ffbd2e,#ff8b22)!important;color:#201400!important;border-color:transparent!important}
+.hours{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35;max-width:235px}
+.open{color:#b9d900}.closed{color:#ff668f}
+.frybadge{white-space:nowrap}
+.fry-hours{line-height:1.5}
+.osm-credit{font-size:11px;color:var(--muted);margin-top:16px}
+body.light .open{color:#688000}body.light .closed{color:#c52d5d}
